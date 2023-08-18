@@ -1,1 +1,3 @@
-console.log("Mandando oi pro amigo!");
+const consultaCEP = fetch("https://viacep.com.br/ws/01001000/json/");
+
+console.log(consultaCEP);

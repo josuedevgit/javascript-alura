@@ -1,5 +1,5 @@
 const menorValor = 1;
-const maiorValor = 200;
+const maiorValor = 1000;
 
 const elementoMenorValor = document.getElementById("menor-valor");
 elementoMenorValor.innerHTML = menorValor;

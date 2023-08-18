@@ -10,10 +10,13 @@ function verificaSeOChutePossuiUmValorValido(chute) {
                 <h3>Pressione o botão para jogar novamente</h3>
                 <button id="jogar-novamente" class="btn-jogar" >Jogar novamente</button>
                 `
-                document.body.style.backgroundColor = "black";
+                document.body.style.background = "black";
+
+                return
         } else {
 
             elementoChute.innerHTML += '<div>Valor Inválido</div>';
+            return
         }
     }
 
@@ -31,7 +34,7 @@ function verificaSeOChutePossuiUmValorValido(chute) {
         `
     } else if(numero > numeroSecreto) {
         elementoChute.innerHTML += `
-            <div>O número secreto é maior <i class="fa-solid fa-down-long"></i></div>
+            <div>O número secreto é menor <i class="fa-solid fa-down-long"></i></div>
         `
     } else {
         elementoChute.innerHTML += `
@@ -48,8 +51,8 @@ function numeroForMaiorOuMenorQueOValorPermitido(numero) {
     return numero > maiorValor || numero < menorValor;
 }
 
-document.body.addEventListener("click", e => {
-    if(e.target.id == "jogar-novamente") {
-        window.location.reload;
+document.body.addEventListener("click", (e) => {
+    if(e.target.id === "jogar-novamente") {
+        window.location.reload();
     }
 })
